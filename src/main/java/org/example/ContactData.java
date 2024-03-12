@@ -5,8 +5,10 @@ public class ContactData {
             public static String findContact(String contactToFind) {
         for (String element : contactStorage){
             if(contactToFind.equalsIgnoreCase(element)){
+                return element;
 
             }
         }
+        return null;
             }
 }
