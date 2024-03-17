@@ -8,7 +8,7 @@ public class App
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter the contact info (name,number).");
-        String contact = scannner.next();
+        String contact = scanner.next();
         String foundContact = ContactData.findContact(contact);
         if (foundContact == null) {
             System.out.println("Contact does not exist.");
