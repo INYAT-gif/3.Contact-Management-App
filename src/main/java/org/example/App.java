@@ -1,19 +1,23 @@
-package org.example;
+
+package se.inyat;
+
 import java.util.Scanner;
-public class App 
-{
-    public static void main( String[] args )
-    {
-//how to call ContactData.findContact
+
+public class App {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter the contact info (name,number).");
-        String contact = scanner.next();
-        String foundContact = ContactData.findContact(contact);
+        System.out.println("Enter the contact name:");
+        String name = scanner.next();
+
+        System.out.println("Enter the contact number:");
+        String number = scanner.next();
+
+        String foundContact = ContactData.findContact(name, number);
         if (foundContact == null) {
             System.out.println("Contact does not exist.");
         } else {
-            System.out.println(contact);
+            System.out.println("Found contact: " + foundContact);
         }
     }
 }
